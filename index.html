@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My [Partner]?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+            color: #333;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff5252;
+        }
+        #proposal {
+            display: none;
+            margin-top: 30px;
+        }
+        #yes, #no {
+            margin: 10px;
+        }
+        #response {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>A Special Message for You</h1>
+    <p>Hey [Crush's Name], I've been wanting to tell you this for a while. You're amazing, and you make my days brighter. I cherish every moment we've shared, and I hope we can create many more together.</p>
+    <button onclick="revealProposal()">Click to See My Heart</button>
+    
+    <div id="proposal">
+        <h2>Will you be my [girlfriend]?</h2>
+        <button id="yes" onclick="respond('yes')">Yes! 💕</button>
+        <button id="no" onclick="respond('no')">Maybe Later 😊</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        function revealProposal() {
+            document.getElementById('proposal').style.display = 'block';
+        }
+        
+        function respond(answer) {
+            const response = document.getElementById('response');
+            if (answer === 'yes') {
+                response.innerHTML = "Yay! I'm so happy! Let's make this official. ❤️";
+                response.style.color = 'green';
+            } else {
+                response.innerHTML = "No worries! I value our friendship and hope we can talk soon. 😊";
+                response.style.color = 'blue';
+            }
+        }
+    </script>
+</body>
+</html>
